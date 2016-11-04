@@ -1,0 +1,26 @@
+h1{  <!-- Ou h1,h1 ou h1 + p-->
+  font-family: tahoma,arial;
+  text-align: center;
+}
+table {
+  border-collapse: collapse;
+}
+
+table.borda, tr.borda, td.borda, th.borda {
+  border:1px solid #000080;
+}
+th.borda{
+  width: 100px;
+}
+
+.imgFundo{
+  height: 200px;
+  background-size: cover;
+
+}
+.footer {
+	position:center;
+	bottom:0;
+	width:100%;
+  text-align: center;
+}

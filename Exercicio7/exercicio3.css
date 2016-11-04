@@ -1,0 +1,14 @@
+h1{  <!-- Ou h1,h1 ou h1 + p-->
+  font-family: tahoma,arial;
+  text-align: center;
+}
+h3{  <!-- Ou h1,h1 ou h1 + p-->
+  font-family: tahoma,arial;
+  text-align: center;
+}
+.footer {
+	position:center;
+	bottom:0;
+	width:100%;
+  text-align: center;
+}

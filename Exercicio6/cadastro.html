@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Sistema de Cadastro de Viagens</title>
+    <link rel="stylesheet" href="bootstrap.css" >
+    <link rel="stylesheet" type="text/css" href="exercicio6.css" />
+
+  </head>
+  <body style="background-color: #dde9eb;">
+
+      <!--<div class="container">-->
+        <div class="row">
+
+          <div class="col-sm-12 nav-tabs">
+            <h1>Sistema de Cadastro de Viagens</h1>
+          </div>
+        </div>
+          <div class="row">
+            <div class="col-sm-12">
+
+                <div class="container">
+                       <ul class="nav nav-tabs col-sm-4">
+                         <li><a href="home.html">Principal</a></li>
+                         <li class="active"><a href="#">Cadastro</a></li>
+                         <li><a href="listar.html">Listar</a></li>
+                         <li><a href="verificar.html">Validar</a></li>
+                       </ul>
+                     </div>
+
+                     <table valing="midle" align="center">
+
+                      <form nome="cadastro" method="post" action="verificar.php" >
+                        <tr><td>Nome:</td>
+                          <td> <input type="text" name="nome" id="nome" class="form-control"><br> </td>
+                        </tr>
+                        <tr><div class="form-group">
+
+                            <td> Gênero:</td>
+                               <td><input type="radio" name="genero" value="F">Feminino"</td>
+                            		<td><input type="radio" name="genero" value="M">Masculino</td>
+                        </tr></div><br>
+                        <tr><td>Rua: </td>
+                          <td><input type="text" name="rua" id='rua' class="form-control"></td>
+                          <td>Número: </td>
+                            <td><input type="number" name="number" class="form-control"></td>
+                        </tr><br>
+                        <tr><td> Complemento:</td>
+                           <td><input type="text" name="complemento" class="form-control"></td>
+                        </tr><br>
+
+                        <div id="listaCidades" class="form-group"> <!--container de codigo-->
+                         <tr> <td>Estado: </td><td><select name="estado"class="form-control">
+                              <option value="1"> Minas Gerais</option>
+                           <option value="2"> São Paulo</option>
+                           <option value="3"> Rio de Janeiro</option></td>
+                         </select>
+                        </div>
+
+
+                        <div id="listaEstados" class="form-group">
+                         <td>Cidade: </td><td><select name="cidade"class="form-control">
+                           <option value="1"> Belo Horizonte</option>
+                           <option value="2"> Itabira</option>
+                           <option value="2"> João Monlevade</option>
+                           <option value="2"> São Gonçalo do Rio Abaixo</option></td></tr>
+
+                         </select>
+                       </div>
+
+                        <tr><td>Cep: </td><td><input type="number" name="cep" class="form-control"></td></tr>
+                        <tr><td>Telefone:</td><td> <input type="phone" name="telefone" class="form-control"></td>
+                        <td>Celular: </td><td> <input type="phone" name="celular" class="form-control"></td></tr>
+                        <tr><td>E-mail: </td><td><input type="email" name="email"class="form-control" ></td></tr>
+                        <tr><td>CPF: </td><td><input type="number" name="cpf" class="form-control"></td></tr>
+                        <tr><td>Usuário: </td><td><input type="text" name="usuario"class="form-control" ></td>
+                        <td>Senha: </td><td><input type="password" name="senha" class="form-control"/></tr>
+                        <tr><td></td><td></td><td>Confirmar Senha: </td><td><input type="password" name="confirmesenha" class="form-control" /><br></td><tr>
+                        <tr><td>Áreas de Intersesse:</td>
+                        <div id="interesses" class="form-group" name="interesses">
+                         <td><input type="checkbox" name="redes"> Redes<br></td></tr>
+                      		<tr><td></td><td><input type="checkbox" name="web"> WEB<br></td></tr>
+                      		<tr><td></td><td><input type="checkbox" name="bd"> BD<br></td></tr>
+                      		<tr><td></td><td><input type="checkbox" name="progi"> PROG I<br></td></tr>
+                      		<tr><td></td><td><input type="checkbox" name="estatistica"> Estatística<br></td></tr>
+                        </div>
+
+                        <tr><td></td><td><input type="submit" name="Cadastrar" value="Cadastrar" class="btn btn-info"></td>
+                        <td><a href=" home.html"><input type="button" value="Voltar" class="btn btn-info "></a></td></tr>
+
+                      </table>
+                      </form>
+
+
+            </div>
+
+
+            </div>
+          </div>
+        <div class="row">
+          <div class="col-sm-12" >
+            <div class="footer">
+            <footer>
+              Aline Marina 14.1.8392
+            </footer>
+            </div>
+
+          </div>
+
+      <!--  </div> -->
+
+      </div>
+
+  </body>
+</html>

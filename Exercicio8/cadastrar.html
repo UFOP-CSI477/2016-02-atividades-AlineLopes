@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Sistema de Cadastro de Viagens</title>
+    <link rel="stylesheet" href="bootstrap.css" >
+    <link rel="stylesheet" type="text/css" href="exercicio3.css" />
+    <script type="text/javascript">
+      function validar(){
+
+      if (document.cad.nome.value == "") {
+          window.alert("O campo nome deve ser preenchido");
+          document.cad.nome.focus();
+          return false;
+        }
+        if (document.cad.genero.value.length == "") {
+          window.alert("O campo genero deve ser preenchido");
+          document.cad.genero.focus();
+          return false;
+        }
+        if (document.cad.rua.value.length == "" ) {
+          window.alert("O campo rua deve ser preenchido");
+          document.cad.rua.focus();
+          return false;
+        }
+        if (document.cad.numero.value.length == "" ) {
+          window.alert("O campo numero deve ser preenchido");
+          document.cad.numero.focus();
+          return false;
+        }
+        if ( document.cad.complemento.value.length == "") {
+          window.alert("O campo complemento deve ser preenchido");
+          document.cad.complemento.focus();
+          return false;
+        }
+        if ( document.cad.estado.value.length == "") {
+          window.alert("O campo estado deve ser preenchido");
+          document.cad.estado.focus();
+          return false;
+        }
+        if ( document.cad.cidade.value.length == "" ) {
+          window.alert("O campo cidade deve ser preenchido");
+          document.cad.cidade.focus();
+          return;
+        }
+        if ( document.cad.cep.value.length == "") {
+          window.alert("O campo cep deve ser preenchido");
+          document.cad.cep.focus();
+          return false;
+        }
+        if ( document.cad.telefone.value.length == "") {
+          window.alert("O campo telefone deve ser preenchido");
+          document.cad.telefone.focus();
+          return false;
+        }
+        if ( document.cad.email.value.length == "") {
+          window.alert("O campo email deve ser preenchido");
+          document.cad.email.focus();
+          return false;
+        }
+        if ( document.cad.CPF.value.length == "" ) {
+          window.alert("O campo CPF deve ser preenchido");
+          document.cad.CPF.focus();
+          return false;
+        }
+        if ( document.cad.usuario.value.length == "") {
+          window.alert("O campo usuario deve ser preenchido");
+          document.cad.usuario.focus();
+          return false;
+        }
+        if ( document.cad.senha.value.length == "" ) {
+          window.alert("O campo senha deve ser preenchido");
+          document.cad.senha.focus();
+          return false;
+        }
+        if ( document.cad.confirmesenha.value.length == "") {
+          window.alert("O campo confirme senha deve ser preenchido");
+          document.cad.confirmesenha.focus();
+          return false;
+        }
+      }
+    </script>
+
+  </head>
+
+  <body style="background-color: #dde9eb;">
+
+      <!--<div class="container">-->
+        <div class="row">
+
+          <div class="col-sm-12 nav-tabs">
+            <h1>Sistema de Cadastro de Viagens</h1>
+          </div>
+        </div>
+          <div class="row">
+            <div class="col-sm-12">
+
+                <div class="container">
+                       <ul class="nav nav-tabs col-sm-4">
+                         <li><a href="home.html">Principal</a></li>
+                         <li class="active"><a href="#">Cadastro</a></li>
+                         <li><a href="listar.html">Listar</a></li>
+                         <li><a href="verificar.html">Validar</a></li>
+                       </ul>
+                     </div>
+
+                     <table valing="midle" align="center">
+
+                      <form nome="cad" method="post" action="verificar.php" >
+                        <tr><td>Nome:</td>
+                          <td> <input type="text" name="nome" id="nome" required="required" class="form-control"><br> </td>
+                        </tr>
+                        <tr><div class="form-group">
+
+                            <td> Gênero:</td>
+                               <td><input type="radio" name="genero" required="required" value="F">Feminino"</td>
+                            		<td><input type="radio" name="genero" required="required" value="M">Masculino</td>
+                        </tr></div><br>
+                        <tr><td>Rua: </td>
+                          <td><input type="text" name="rua" id='rua' required="required" class="form-control"></td>
+                          <td>Número: </td>
+                            <td><input type="number" name="numero" required="required" class="form-control"></td>
+                        </tr><br>
+                        <tr><td> Complemento:</td>
+                           <td><input type="text" name="complemento" required="required" class="form-control"></td>
+                        </tr><br>
+
+                        <div id="listaCidades" class="form-group"> <!--container de codigo-->
+                         <tr> <td>Estado: </td><td><select name="estado"class="form-control">
+                              <option value="1" required="required"> Minas Gerais</option>
+                           <option value="2" required="required"> São Paulo</option>
+                           <option value="3" required="required"> Rio de Janeiro</option></td>
+                         </select>
+                        </div>
+
+
+                        <div id="listaEstados" class="form-group">
+                         <td>Cidade: </td><td><select name="cidade"class="form-control">
+                           <option value="1" required="required"> Belo Horizonte</option>
+                           <option value="2" required="required" > Itabira</option>
+                           <option value="3" required="required"> João Monlevade</option>
+                           <option value="4" required="required"> São Gonçalo do Rio Abaixo</option></td></tr>
+
+                         </select>
+                       </div>
+
+                        <tr><td>Cep: </td><td><input type="number" name="cep" required="required" class="form-control"></td></tr>
+                        <tr><td>Telefone:</td><td> <input type="phone" name="telefone" required="required" class="form-control"></td>
+                        <td>Celular: </td><td> <input type="phone" name="celular" required="required" class="form-control"></td></tr>
+                        <tr><td>E-mail: </td><td><input type="email" name="email" required="required" class="form-control" ></td></tr>
+                        <tr><td>CPF: </td><td><input type="number" name="cpf" required="required" class="form-control"></td></tr>
+                        <tr><td>Usuário: </td><td><input type="text" name="usuario" required="required" class="form-control" ></td>
+                        <td>Senha: </td><td><input type="password" name="senha" required="required" class="form-control"/></tr>
+                        <tr><td></td><td></td><td>Confirmar Senha: </td><td><input type="password" name="confirmesenha" required="required" class="form-control" /><br></td><tr>
+                        <tr><td>Áreas de Intersesse:</td>
+                        <div id="interesses" class="form-group">
+                         <td><input type="checkbox" name="redes"> Redes<br></td></tr>
+                      		<tr><td></td><td><input type="checkbox" name="web"> WEB<br></td></tr>
+                      		<tr><td></td><td><input type="checkbox" name="bd"> BD<br></td></tr>
+                      		<tr><td></td><td><input type="checkbox" name="progi"> PROG I<br></td></tr>
+                      		<tr><td></td><td><input type="checkbox" name="estatistica"> Estatística<br></td></tr>
+                        </div>
+
+                        <tr><td></td><td><button type="submit" onclick="validar()" class="btn btn-info">Cadastrar</button></td>
+                        <td><a href=" home.html"><input type="button" value="Voltar" class="btn btn-info "></a></td></tr>
+
+                      </table>
+                      </form>
+
+
+            </div>
+
+
+            </div>
+          </div>
+        <div class="row">
+          <div class="col-sm-12" >
+            <div class="footer">
+            <footer>
+              Aline Marina 14.1.8392
+            </footer>
+            </div>
+
+          </div>
+
+      <!--  </div> -->
+
+      </div>
+
+  </body>
+</html>

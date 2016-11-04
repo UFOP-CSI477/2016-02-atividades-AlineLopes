@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Calculo</title>
+    <script type="text/javascript">
+      function calcular(){
+        var x = window.prompt("Insira o peso em Kg:");
+        var y = window.prompt("Insira a altura em metros:");
+        var elevado = parseFloat(y)*parseFloat(y);
+        var z = parseInt(x)/parseFloat(elevado);
+        document.getElementById("valor").innerHTML = z;
+
+        if (z<17) {
+            window.alert("O IMC é " + z +".Logo seu IMC indica muito abaixo do peso");
+        } else if (z>17 && z<18.49) {
+            window.alert("O IMC é  " + z +".Logo seu IMC indica abaixo do peso");
+        } else if (z>18.5 && z<24.99) {
+            window.alert("O IMC é  " + z +".Logo seu IMC indica normalidade");
+        } else if (z>25 && z<29.99) {
+            window.alert("O IMC é  " + z +".Logo seu IMC acima do peso");
+        } else if (z>30 && z<34.99) {
+            window.alert("O IMC é  " + z +".Logo seu IMC indica obesidade I");
+        } else if (z>35 && z<39.99) {
+            window.alert("O IMC é  " + z +".Logo seu IMC indica obesidade II(severa)");
+        }else {
+            window.alert("O IMC é  " + z +".Logo seu IMC indica obesidade III(mórbida)");
+        }
+
+      }
+    </script>
+  </head>
+  <body>
+
+    <div id="valor">Valor</div>
+
+    <button type="button" onclick="calcular()">Calcular o IMC</button>
+
+  </body>
+</html>
